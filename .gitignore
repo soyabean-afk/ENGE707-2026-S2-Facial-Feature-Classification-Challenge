@@ -1,0 +1,31 @@
+# Competition data (large, not allowed to be shared)
+enge-707-*/
+data/
+*.zip
+train_labels.csv
+sample_submission.csv
+
+# Dataset images: ignore all images except the figures in outputs/
+*.jpg
+*.jpeg
+*.png
+*.bmp
+*.webp
+!outputs/*.png
+!outputs/**/*.png
+
+# Python environment
+.venv/
+venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Large / regenerated outputs and model files
+outputs/image_stats.csv
+*.pt
+*.pth
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
