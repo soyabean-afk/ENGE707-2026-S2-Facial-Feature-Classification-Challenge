@@ -1,0 +1,22 @@
+{
+  "class_to_idx": {
+    "CatEye": 0,
+    "DogEye": 1,
+    "CatFace": 2,
+    "DogFace": 3,
+    "CatMouth": 4,
+    "DogMouth": 5,
+    "CatNose": 6,
+    "DogNose": 7
+  },
+  "idx_to_class": {
+    "0": "CatEye",
+    "1": "DogEye",
+    "2": "CatFace",
+    "3": "DogFace",
+    "4": "CatMouth",
+    "5": "DogMouth",
+    "6": "CatNose",
+    "7": "DogNose"
+  }
+}
