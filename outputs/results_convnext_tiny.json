@@ -1,0 +1,46 @@
+{
+  "arch": "convnext_tiny",
+  "img_size": 224,
+  "epochs_run": 12,
+  "best_epoch": 10,
+  "train_minutes": 81.9,
+  "val_accuracy": 0.99802,
+  "val_loss": 0.09187,
+  "val_macro_f1": 0.9982,
+  "val_accuracy_no_tta": 0.99835,
+  "quick_test": false,
+  "config": {
+    "seed": 42,
+    "img_size": 224,
+    "resize_mode": "pad",
+    "val_fraction": 0.15,
+    "drop_corrupted": true,
+    "drop_label_conflicts": true,
+    "dedupe_exact_copies": true,
+    "batch_size": 64,
+    "num_workers": 0,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "arch": "convnext_tiny",
+    "pretrained": true,
+    "dropout": 0.2,
+    "epochs": 12,
+    "lr": 0.0001,
+    "head_lr_mult": 10,
+    "weight_decay": 0.05,
+    "warmup_epochs": 1,
+    "label_smoothing": 0.1,
+    "use_class_weights": false,
+    "grad_clip": 2.0,
+    "early_stop_patience": 4,
+    "tta": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "run": "convnext_tiny_robust",
+  "best_epoch": 12,
+  "val_acc": 0.9986803035301881,
+  "train_minutes": 46.2,
+  "stress_test": {
+    "round 1": {
+      "clean": 0.998020455295282,
+      "lowres": 0.9329154294512262,
+      "dark": 0.9961508852963818,
+      "blur": 0.9846035411855273,
+      "mean (degraded)": 0.9712232853110452
+    },
+    "round 2 (robust)": {
+      "clean": 0.9985703288243704,
+      "lowres": 0.9953810623556582,
+      "dark": 0.9982404047069174,
+      "blur": 0.9946112394149346,
+      "mean (degraded)": 0.9960775688258368
+    }
+  },
+  "quick_test": false,
+  "config": {
+    "run_name": "convnext_tiny_robust",
+    "round1_name": "convnext_tiny",
+    "arch": "convnext_tiny",
+    "img_size": 224,
+    "seed": 7,
+    "dropout": 0.2,
+    "epochs": 12,
+    "batch_size": 64,
+    "lr": 0.0001,
+    "head_lr_mult": 10,
+    "weight_decay": 0.05,
+    "warmup_epochs": 1,
+    "label_smoothing": 0.1,
+    "grad_clip": 2.0,
+    "early_stop_patience": 5,
+    "num_workers": 4
+  }
+}

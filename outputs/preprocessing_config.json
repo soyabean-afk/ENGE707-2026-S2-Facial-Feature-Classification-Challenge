@@ -1,0 +1,38 @@
+{
+  "seed": 42,
+  "img_size": 224,
+  "resize_mode": "pad",
+  "val_fraction": 0.15,
+  "drop_corrupted": true,
+  "drop_label_conflicts": true,
+  "dedupe_exact_copies": true,
+  "batch_size": 64,
+  "num_workers": 0,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "classes": [
+    "CatEye",
+    "DogEye",
+    "CatFace",
+    "DogFace",
+    "CatMouth",
+    "DogMouth",
+    "CatNose",
+    "DogNose"
+  ],
+  "val_fold": 0,
+  "n_splits": 7,
+  "n_train": 54552,
+  "n_val": 9093,
+  "n_test": 29443,
+  "train_transform": "Compose(\n    ResizePad(size=224)\n    RandomHorizontalFlip(p=0.5)\n    RandomAffine(degrees=[-10.0, 10.0], translate=(0.05, 0.05), scale=(0.9, 1.1), fill=(124, 116, 104))\n    ColorJitter(brightness=(0.8, 1.2), contrast=(0.8, 1.2), saturation=(0.8, 1.2), hue=(-0.02, 0.02))\n    ToTensor()\n    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n)",
+  "eval_transform": "Compose(\n    ResizePad(size=224)\n    ToTensor()\n    Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225])\n)"
+}
